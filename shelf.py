@@ -99,7 +99,7 @@ async def load_browser():
 
     p = await async_playwright().start()  # 不使用 async with
 
-    browser = await p.chromium.launch(headless=False, executable_path=CHROME_DIR)  # 可改 True
+    browser = await p.chromium.launch(headless=False)  # 可改 True
 
     # 如果已经有会话文件，加载它
     try:
